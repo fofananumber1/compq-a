@@ -1,0 +1,21 @@
+.title {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Rockwell;
+  color:rgb(150, 0, 0);
+  
+}
+
+.home_body {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Palatino;
+}
