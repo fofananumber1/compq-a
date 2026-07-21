@@ -1,31 +1,36 @@
 .navbar {
+    position: relative;
     display: flex;
+    align-items: center;
     background-color: white;
     font-family: Rockwell;
     height: 40px;
-    border-bottom: 2px rgb(21, 21, 21);
 }
 
 .navbar-link {
-    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
+    list-style: none;
     font-size: 12px;
     font-family: Trebuchet MS;
 }
 
 .collapse {
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-brand {
-    display: flex;
+    flex: 0 0 120px;
     align-items: center;
     justify-content: left;
     margin-left: 1rem;
     font-size: 16px;
     font-weight: bold;
-    color:rgb(150, 0, 0);
+    color: rgb(150, 0, 0);
 }
