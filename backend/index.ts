@@ -1,27 +1,29 @@
-import fastify from 'fastify'
+import express, { type Request, type Response } from 'express';
+import cors from 'cors'
+import dotenv from 'dotenv';
+import { pool } from './db/db.js';
 
-const app = fastify()
+dotenv.config();
+const app = express();
 
-app.get('/', async (request, reply) => {
-    return reply.send('Hello from fastify!')
+// Middleware to parse JSON bodies
+app.use(express.json());
+app.use(cors());
+
+const PORT = 3000;
+
+app.get('/', (_req: Request, res: Response) => {
+    res.json({
+        success: true,
+        page: 'landing',
+        message: 'Welcome to iQ&A',
+    });
+});
+
+app.post('/register', (_req: Request, _res: Response) => {
+
 })
 
-app.get('/about', async (request, reply) => {
-    return reply.send('This is the about page')
-})
-
-app.get('/questions', async (request, reply) => {
-    const responseData = ([
-        { id: 1, name: 'Q1'},
-        { id: 2, name: 'Q2'}
-    ])
-    return reply.send(responseData)
-})
-
-app.listen({ port:8080 }, (err, address) => {
-    if (err) {
-        console.error(err)
-        process.exit(1)
-    }
-    console.log(`Server listening at ${address}`)
-})
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});

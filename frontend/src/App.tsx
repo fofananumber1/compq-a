@@ -21,7 +21,8 @@ function App({ navItems }: { navItems: NavItem[]}) {
             <h1>iQ&A</h1>
           </div>
           <div className="home_body">
-            <p>Get trusted answers from developers, engineers, and technology professionals.</p>
+            <p>Get trusted answers from developers, engineers, and technology professionals.
+            </p>
           </div>
         </>
       )}

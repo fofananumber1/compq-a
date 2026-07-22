@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Login from './pages/login';
+import Register from './pages/register';
 import type { NavItem } from './components/Navbar';
 
 import './index.css'
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <Login />, 
+      },
+      {
+        path: 'register',
+        element: <Register />
       }
     ]
   }
